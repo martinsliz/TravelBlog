@@ -3,7 +3,7 @@ const { Schema } = require('mongoose')
 const reviewSchema = new Schema(
   {
     rating: { type: String, required: true },
-    affordable: { type: String, required: true },
+    affordable: { type: String },
     bestTimeToGo: { type: String, required: true },
     whereToStay: { type: String, required: true },
     attractions: { type: String, required: true },
