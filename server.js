@@ -13,7 +13,7 @@ app.use(logger('dev'))
 app.use('/api', routes)
 
 app.get('/', (req, res) => {
-  res.send('This is root!')
+  res.send('Hello!')
 })
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
