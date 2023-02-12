@@ -36,11 +36,9 @@ const getReviewById = async (req, res) => {
 
 const updateReview = async (req, res) => {
   try {
-    const destination = await Review.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-      { new: true }
-    )
+    const review = await Review.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    })
     res.status(200).json(review)
   } catch (error) {
     return res.status(500).send(error.message)
