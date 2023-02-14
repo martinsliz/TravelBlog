@@ -16,3 +16,11 @@
 .App-link {
   color: #61dafb;
 }
+
+header {
+  background-color: #787878;
+  display: flex;
+  /* justify-content: flex-end; */
+  align-items: center;
+  height: 3em;
+}
