@@ -4,7 +4,7 @@ const destinationSchema = new Schema(
   {
     name: { type: String, required: true },
     location: { type: String, required: true },
-    avgRating: { type: Number, required: true },
+    rating: { type: Number, required: true },
     languages: { type: String, required: true },
     currency: { type: String, required: true },
     travelWarning: { type: String, required: true },

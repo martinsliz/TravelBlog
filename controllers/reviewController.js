@@ -1,9 +1,12 @@
-const { Review } = require('../models')
+const { Review, Destination } = require('../models')
 
 const createReview = async (req, res) => {
   try {
     const review = await new Review(req.body)
     await review.save()
+    const destination = await Destination.findById(req.body.destination)
+    destination.reviews.push(review._id)
+    await destination.save()
     return res.status(201).json({
       review
     })
