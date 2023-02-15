@@ -20,7 +20,6 @@ const DestinationDetails = (props) => {
   }
   useEffect(() => {
     const getDetails = props.destinations.find(destination => destination._id === id)
-    // console.log(props.destinations)
     setDetails(getDetails)
     getAllReviews()
 
@@ -33,7 +32,12 @@ const DestinationDetails = (props) => {
       
       <div>
         <img src={details.imageOne} alt='' />
-        <h2>Name: {details.name}, Location: {details.location}</h2>
+        <h2>Name: {details.name}</h2><h3>Location: {details.location}
+        </h3>
+        <ul><li>Languages: {details.languages}</li> 
+        <li>Currency: {details.currency}</li>
+        <li>Travel Warning: {details.travelWarning}</li>
+        <li></li></ul>
       </div>
      <div>
       {destinationReviews.map((review) => (
