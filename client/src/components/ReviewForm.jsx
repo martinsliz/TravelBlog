@@ -1,8 +1,10 @@
 import axios from 'axios'
 import { useState } from 'react'
 import { BASE_URL } from '../globals'
+import { useNavigate } from 'react-router-dom'
 
-const ReviewForm = (props) => {
+const ReviewForm = ( {details} ) => {
+  let navigate = useNavigate()
   const initialState = {
     rating: '',
     affordable: '',
@@ -11,10 +13,11 @@ const ReviewForm = (props) => {
     attractions: '',
     restaurants: '',
     image: '',
-    comments: ''
-
-
+    comments: '',
+    destination: details._id 
   }
+
+
   const [formState, setFormState] = useState(initialState)
 
   const handleChange = (event) => {
@@ -24,9 +27,9 @@ const ReviewForm = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await axios.post(`${BASE_URL}/review`, formState)
-    console.log(formState)
+    await axios.post(`${BASE_URL}/reviewRouter/review`, formState)
     setFormState(initialState)
+    navigate(`/destination/${details._id}`)
   }
 
   return (

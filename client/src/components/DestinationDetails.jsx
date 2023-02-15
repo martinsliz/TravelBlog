@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { BASE_URL } from '../globals'
 import axios from 'axios'
 import Review from './Review'
 
-const DestinationDetails = (props) => {
-  const [details, setDetails] = useState('')
+
+const DestinationDetails = ({details, destinations, setDetails}) => {
   const [destinationReviews, setDestinationReviews] = useState([]) 
   
   let { id } = useParams()
@@ -19,13 +19,13 @@ const DestinationDetails = (props) => {
     setDestinationReviews(filterReviews)
   }
   useEffect(() => {
-    const getDetails = props.destinations.find(destination => destination._id === id)
+    const getDetails = destinations.find(destination => destination._id === id)
     setDetails(getDetails)
     getAllReviews()
 
-  }, [])
+  }, [details])
   
-  console.log(destinationReviews)
+
   
   return details ? (
     <div className='details'>
@@ -43,6 +43,7 @@ const DestinationDetails = (props) => {
       {destinationReviews.map((review) => (
         <Review review={review} />
       ))}
+      <Link to='/addReview' ><h3>Visited this destination? Add your review!</h3></Link>
      </div>
     </div>
   ) : null
