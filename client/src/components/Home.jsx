@@ -8,11 +8,12 @@ const Home = (props) => {
   
   
   useEffect(() => {
-    
     const getFeatured = props.destinations[Math.floor(Math.random() * props.destinations.length)]
       
-      setFeatured(getFeatured)
+    setFeatured(getFeatured)
 
+
+  
   }, [props.destinations])
 
   return (

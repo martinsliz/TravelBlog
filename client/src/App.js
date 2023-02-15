@@ -7,15 +7,18 @@ import About from './components/About'
 import './styles/App.css'
 import Home from './components/Home'
 import ViewAllDestinations from './components/ViewAllDestinations'
+import DestinationDetails from './components/DestinationDetails'
 
 const App = () => {
   const [destinations, setDestinations] = useState([])
+
   const getDestinations = async () => {
     const response = await axios.get(
       `${BASE_URL}/destinationRouter/destinations`
     )
     setDestinations(response.data.destinations)
   }
+
   useEffect(() => {
     getDestinations()
   }, [])
@@ -31,7 +34,10 @@ const App = () => {
             path="/viewAllDestinations"
             element={<ViewAllDestinations destinations={destinations} />}
           />
-          <Route path="/destinationDetails" />
+          <Route
+            path="/destination/:id"
+            element={<DestinationDetails destinations={destinations} />}
+          />
         </Routes>
       </main>
     </div>
