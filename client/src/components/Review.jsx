@@ -9,7 +9,11 @@ const Review = ({ review, getAllReviews }) => {
       <div className="review">
         <div>
           <tr>
-            <td>Rating: {review.rating}</td>
+            <td>
+              <h2>Rating: {review.rating}</h2>
+            </td>
+          </tr>
+          <tr>
             <td>Budget friendly? {review.affordable}</td>
           </tr>
           <h6></h6>
