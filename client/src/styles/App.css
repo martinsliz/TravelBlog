@@ -2,6 +2,8 @@ body {
   margin: 0;
   text-align: center;
   background-image: url('https://i.imgur.com/urAOSQn.jpg');
+  height: 100vh;
+  width: 100vw;
   background-size: cover;
 }
 
@@ -32,7 +34,7 @@ header {
 }
 
 .cover {
-  width: 60%;
+  width: 70%;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -55,28 +57,29 @@ header {
   font-size: xx-large;
 }
 
-.container .name {
+.container {
+  margin-top: 20px;
   padding: 2em 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, 320px);
-  grid-gap: 1em;
+  grid-gap: 4em;
   justify-content: center;
 }
 
-.all {
-  display: flex;
-  width: 18em;
-  height: 15em;
-  margin: 1em;
-  justify-content: space-around;
-  color: #531c06;
-  cursor: pointer;
+.container img {
+  padding: auto;
+  height: 15rem;
+  width: 20rem;
+}
+
+.name {
+  text-align: center;
 }
 
 img {
-  margin: auto;
+  /* margin: auto; */
   text-align: center;
-  width: 100%;
+  width: 50%;
 }
 
 .details {
