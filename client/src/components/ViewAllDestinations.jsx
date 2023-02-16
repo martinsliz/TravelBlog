@@ -11,7 +11,8 @@ const ViewAllDestinations = (props) => {
         <NavLink to={`/destination/${destination._id}`} >
         <div className='all' key={destination._id}>
         <img src={destination.imageOne} alt='' />
-        <div>{destination.name}</div>
+        <br/>
+        <h2 className="name">{destination.name}</h2>
         </div>
         </NavLink>
       ))}
