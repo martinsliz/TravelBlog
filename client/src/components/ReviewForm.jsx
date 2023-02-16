@@ -46,11 +46,11 @@ const ReviewForm = ( {details} ) => {
       <input type="text" id="whereToStay" onChange={handleChange} value={formState.whereToStay} />
       <label htmlFor="restaurants">Where to Eat:</label>
       <input type="text" id="restaurants" onChange={handleChange} value={formState.restaurants} />
-      <label htmlFor="comments">Comments:</label>
+      <label htmlFor="comments">Tell us more!</label>
       <input type="text-area" id="comments" onChange={handleChange} value={formState.comments} />
-      <label htmlFor=""></label>
+      <label htmlFor="">Upload a Photo:</label>
       <input type="text" id="image" onChange={handleChange} value={formState.image} />
-      <button type="submit">Submit</button>
+      <button type="submit">Submit</button> 
       </form>
   )
 }

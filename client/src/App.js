@@ -9,7 +9,6 @@ import Home from './components/Home'
 import ViewAllDestinations from './components/ViewAllDestinations'
 import DestinationDetails from './components/DestinationDetails'
 import ReviewForm from './components/ReviewForm'
-import UpdateReview from './components/UpdateReview'
 
 const App = () => {
   const [destinations, setDestinations] = useState([])
@@ -48,7 +47,6 @@ const App = () => {
             }
           />
           <Route path="/addReview" element={<ReviewForm details={details} />} />
-          <Route path="reviews/update/:id" element={<UpdateReview />} />
         </Routes>
       </main>
     </div>

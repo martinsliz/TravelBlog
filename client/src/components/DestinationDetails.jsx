@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, NavLink } from 'react-router-dom'
 import { BASE_URL } from '../globals'
 import axios from 'axios'
 import Review from './Review'
@@ -41,9 +41,9 @@ const DestinationDetails = ({details, destinations, setDetails}) => {
       </div>
      <div>
       {destinationReviews.map((review) => (
-        <Review review={review} />
+        <Review review={review} getAllReviews={getAllReviews}/>
       ))}
-      <Link to='/addReview' ><h3>Visited this destination? Add your review!</h3></Link>
+      <NavLink to='/addReview' ><h3>Visited this destination? Add your review!</h3></NavLink>
      </div>
     </div>
   ) : null

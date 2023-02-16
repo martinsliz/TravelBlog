@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 
 const Home = (props) => {
@@ -17,7 +18,7 @@ const Home = (props) => {
   }, [props.destinations])
 
   return (
-    <div className="main">
+    <div className="home">
       {featured && 
       <div>
         <h1>The Bucket-list Bucket!</h1>
@@ -27,6 +28,8 @@ const Home = (props) => {
         <div>
       <img src={featured.imageOne} alt="Background" />
       </div>
+      <NavLink to="/viewAllDestinations">View More...</NavLink>
+
     </section>
       </div>
       }

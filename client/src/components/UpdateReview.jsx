@@ -1,53 +1,29 @@
-import { useParams, useNavigate } from "react-router-dom"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { BASE_URL } from "../globals"
 import axios from "axios"
+import { useNavigate } from "react-router-dom"
 
-const UpdateReview = (props) => {
-  let { id } = useParams()
-  let navigate = useNavigate()
-
-const [formState, setFormState] = useState({})
+const UpdateReview = ( {review, getAllReviews} ) => {
 
 
-const findReview = () => {
-  let foundReview = props.reviews.filter((review) => {
-  return review._id === id
+const [formState, setFormState] = useState(review)
 
-  
-})
-setFormState(foundReview[0])
-console.log(foundReview)
-}
+let navigate = useNavigate()
 
 const handleChange = (event) => {
   setFormState({...formState, [event.target.id]: event.target.value})
 }
 
-
 const handleSubmit = async (event) => {
   event.preventDefault()
-  let newReview = {
-    rating: formState.rating,
-    affordable: formState.affordable
-  }
-  
-  await axios.put(`${BASE_URL}/reviewRouter/review/:id`, formState)
-  setFormState({})
-  navigate(`/destination/${details._id}`)
+
+  await axios.put(`${BASE_URL}/reviewRouter/review/${formState._id}`, formState)
+getAllReviews()
 }
-
-
-
-
-useEffect(() => {
-findReview()
-},[])
-
-
-
-
-
+const deleteReview = async () => {
+  const response = await axios.delete(`${BASE_URL}/reviewRouter/review/${formState._id}`)
+  navigate("/destination/:id")
+}
 
 return (
 
@@ -66,17 +42,14 @@ return (
     <input type="text" id="restaurants" onChange={handleChange} value={formState.restaurants} />
     <label htmlFor="comments">Comments:</label>
     <input type="text-area" id="comments" onChange={handleChange} value={formState.comments} />
-    <label htmlFor=""></label>
+    <label htmlFor="">Your Photos:</label>
     <input type="text" id="image" onChange={handleChange} value={formState.image} />
-    <button type="submit">Submit</button>
+    <button type="submit">Edit Review</button>
+    <button onClick={deleteReview}>Delete</button>
+
     </form>
 )
 }
-
-
-
-
-
 
 
 export default UpdateReview

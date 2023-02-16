@@ -1,19 +1,16 @@
 import { useNavigate } from "react-router-dom"
+import UpdateReview from "./UpdateReview"
 
 
 
-const Review = ({ review }) => {
-  let navigate = useNavigate()
+const Review = ({ review, getAllReviews }) => {
+  // let navigate = useNavigate()
 
-const updateReview = () => {
-  navigate(`/reviews/update/${review._id}`)
-
-}  
+  
   return (
     <div>
     <div>
       <ul>
-      <h3>What Visitors are Saying</h3>
         <li>Rating: {review.rating}</li>
         <li>Budget friendly? {review.affordable}</li>
         <li>Best Time to Go: {review.bestTimeToGo}</li>
@@ -23,7 +20,9 @@ const updateReview = () => {
         <li>Comments: {review.comments}</li>
       </ul>
       </div>
-      <button onClick={updateReview}>Edit</button>
+      {/* <button onClick={updateReview}>Edit</button> */}
+      <UpdateReview review={review} getAllReviews={getAllReviews} />
+      {/* <DeleteReview review={review} getAllReviews={getAllReviews} /> */}
       </div>
   )
 }
