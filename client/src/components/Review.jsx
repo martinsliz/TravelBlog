@@ -1,25 +1,35 @@
-import UpdateReview from "./UpdateReview"
-
-
+import UpdateReview from './UpdateReview'
+import { useState } from 'react'
 
 const Review = ({ review, getAllReviews }) => {
+  const [updating, setUpdating] = useState(false)
 
-  
   return (
     <div>
-    <div className="review">
-      <ul>
-        <li>Rating: {review.rating}</li>
-        <li>Budget friendly? {review.affordable}</li>
-        <li>Best Time to Go: {review.bestTimeToGo}</li>
-        <li>What to See: {review.attractions}</li>
-        <li>Where to Stay: {review.whereToStay}</li>
-        <li>Where to Eat: {review.restaurants}</li>
-        <li>Comments: {review.comments}</li>
-      </ul>
+      <div className="review">
+        <div>
+          <tr>
+            <td>Rating: {review.rating}</td>
+            <td>Budget friendly? {review.affordable}</td>
+          </tr>
+          <h6></h6>
+          <h6>Best Time to Go: {review.bestTimeToGo}</h6>
+          <h6>What to See: {review.attractions}</h6>
+          <h6>Where to Stay: {review.whereToStay}</h6>
+          <h6>Where to Eat: {review.restaurants}</h6>
+          Comments: {review.comments}
+        </div>
       </div>
-      <UpdateReview review={review} getAllReviews={getAllReviews} />
-      </div>
+      {updating ? (
+        <UpdateReview
+          review={review}
+          getAllReviews={getAllReviews}
+          setUpdating={setUpdating}
+        />
+      ) : (
+        <button onClick={() => setUpdating(true)}>Edit</button>
+      )}
+    </div>
   )
 }
 

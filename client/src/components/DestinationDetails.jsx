@@ -35,11 +35,10 @@ const DestinationDetails = ({details, destinations, setDetails}) => {
       <section className='imageContainer'>
       <img className='detailImage' src={details.imageOne} alt='' />
       </section>
-      <div>
-        <ul><li>Languages: {details.languages}</li> 
-        <li>Currency: {details.currency}</li>
-        <li>Travel Warning: {details.travelWarning}</li>
-        <li></li></ul>
+      <div className='travel'>
+      Languages: {details.languages}
+      Currency: {details.currency}
+      Travel Warning: {details.travelWarning}
       </div>
      <div>
       {destinationReviews.map((review) => (

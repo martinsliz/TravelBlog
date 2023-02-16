@@ -24,10 +24,10 @@ const Home = (props) => {
       <div className='description'>
         <div className='description'>
         </div>
+        <div className='cover'>
         <span className='bucket' >The Bucket-list Bucket!
         Saving you from visiting hundreds of websites by putting everyone's bucket-list trips all in one place!
         </span>
-        <div className='cover'>
       <h2>Featured Destination!</h2>
       <img className='coverImage' src={featured.imageOne} alt="Cover" />
       <h3>{featured.name}</h3>
