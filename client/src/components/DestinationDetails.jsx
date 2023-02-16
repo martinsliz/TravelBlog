@@ -28,12 +28,14 @@ const DestinationDetails = ({details, destinations, setDetails}) => {
 
   
   return details ? (
-    <div className='details'>
-      
+    <div className='destination-content'>
       <div>
-        <img src={details.imageOne} alt='' />
-        <h2>Name: {details.name}</h2><h3>Location: {details.location}
-        </h3>
+      <h2>Name: {details.name}</h2><h3>Location: {details.location}</h3>
+      </div>
+      <section className='imageContainer'>
+      <img className='detailImage' src={details.imageOne} alt='' />
+      </section>
+      <div>
         <ul><li>Languages: {details.languages}</li> 
         <li>Currency: {details.currency}</li>
         <li>Travel Warning: {details.travelWarning}</li>

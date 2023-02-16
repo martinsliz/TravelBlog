@@ -22,11 +22,13 @@ const Home = (props) => {
     <div className="home">
       {featured && 
       <div className='description'>
+        <div className=''>
         <h1>The Bucket-list Bucket!</h1>
         <h1>Saving you from visiting hundreds of websites by putting everyone's bucket-list trips all in one place!</h1>
+        </div>
       <h1>Featured Destination!</h1>
         <div className='cover'>
-      <img src={featured.imageOne} alt="Cover" />
+      <img className='coverImage' src={featured.imageOne} alt="Cover" />
       </div>
       <div className='viewAll'>
       <NavLink to="/viewAllDestinations">View More...</NavLink>

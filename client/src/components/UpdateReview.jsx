@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom"
 
 const UpdateReview = ( {review, getAllReviews} ) => {
 
-
 const [formState, setFormState] = useState(review)
 
 let navigate = useNavigate()
@@ -28,7 +27,7 @@ const deleteReview = async () => {
 
 return (
 
-  <form onSubmit={handleSubmit}>
+  <form className="update" onSubmit={handleSubmit}>
     <label htmlFor='rating'>Rating</label>
     <input type='text' id="rating" onChange={handleChange} value={formState.rating} />
     <label htmlFor='affordable'>Budget-friendly?</label>

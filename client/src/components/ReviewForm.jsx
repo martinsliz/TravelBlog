@@ -33,7 +33,7 @@ const ReviewForm = ( {details} ) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='reviewForm' onSubmit={handleSubmit}>
       <label htmlFor='rating'>Rating</label>
       <input type='text' id="rating" onChange={handleChange} value={formState.rating} />
       <label htmlFor='affordable'>Budget-friendly?</label>

@@ -2,7 +2,7 @@ const About = () => {
   return (
     <div className="flex-col">
       <h1>About Us</h1>
-      <span className="about"></span>
+      <span className="about">Thanks so much for stopping in! Our goal is to create the "Wikipedia" for travel destinations, where you can share your bucket-list destinations with the world!.  There aren't any "influencers" trying to get you to buy something, just fellow travelers sharing their experiences. Enjoy!</span>
     </div>
   )
 }

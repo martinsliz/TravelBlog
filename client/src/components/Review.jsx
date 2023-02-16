@@ -7,7 +7,7 @@ const Review = ({ review, getAllReviews }) => {
   
   return (
     <div>
-    <div>
+    <div className="review">
       <ul>
         <li>Rating: {review.rating}</li>
         <li>Budget friendly? {review.affordable}</li>
