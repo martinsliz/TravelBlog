@@ -1,10 +1,8 @@
-import { useNavigate } from "react-router-dom"
 import UpdateReview from "./UpdateReview"
 
 
 
 const Review = ({ review, getAllReviews }) => {
-  // let navigate = useNavigate()
 
   
   return (
@@ -20,9 +18,7 @@ const Review = ({ review, getAllReviews }) => {
         <li>Comments: {review.comments}</li>
       </ul>
       </div>
-      {/* <button onClick={updateReview}>Edit</button> */}
       <UpdateReview review={review} getAllReviews={getAllReviews} />
-      {/* <DeleteReview review={review} getAllReviews={getAllReviews} /> */}
       </div>
   )
 }

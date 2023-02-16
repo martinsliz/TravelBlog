@@ -19,6 +19,7 @@ const handleSubmit = async (event) => {
 
   await axios.put(`${BASE_URL}/reviewRouter/review/${formState._id}`, formState)
 getAllReviews()
+setFormState('')
 }
 const deleteReview = async () => {
   const response = await axios.delete(`${BASE_URL}/reviewRouter/review/${formState._id}`)
