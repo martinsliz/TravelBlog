@@ -1,9 +1,10 @@
 body {
   margin: 0;
+  color: #531c06;
   text-align: center;
   background-image: url('https://i.imgur.com/urAOSQn.jpg');
-  /* height: 100vh;
-  width: 100vw; */
+  height: 100vh;
+  /* width: 100vw; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,6 +25,18 @@ header {
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.bucket {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 55%;
+  font-size: x-large;
+  font-weight: bold;
+  color: #531c06;
 }
 
 .about {
@@ -63,6 +76,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: antiquewhite;
 }
 
 .coverImage {
@@ -75,10 +89,8 @@ header {
 }
 
 .description {
-  margin-top: 100px;
-  color: rgb(135, 50, 11);
+  margin-top: 20px;
   display: flex;
-  width: 80%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -109,7 +121,6 @@ header {
 }
 
 img {
-  /* margin: auto; */
   text-align: center;
   width: 50%;
 }
@@ -122,7 +133,6 @@ img {
 .destination-content {
   margin-top: 1em;
   width: 95vw;
-  /* margin: auto; */
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding: 1em 0;
 }
