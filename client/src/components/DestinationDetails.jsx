@@ -30,8 +30,8 @@ const DestinationDetails = ({ details, destinations, setDetails }) => {
       <section className="imageContainer">
         <img className="detailImage" src={details.imageOne} alt="" />
       </section>
-      <div className="bucket">
-        <h2>Destination: {details.name}</h2>
+      <div className="info">
+        <h2 className="feature">Destination: {details.name}</h2>
         <h3>Location: {details.location}</h3>
         <h3>Languages: {details.languages}</h3>
         <h3>Currency: {details.currency}</h3>

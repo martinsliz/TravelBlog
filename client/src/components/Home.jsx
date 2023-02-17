@@ -23,7 +23,7 @@ const Home = (props) => {
             </span>
             <h2>Featured Destination!</h2>
             <img className="coverImage" src={featured.imageOne} alt="Cover" />
-            <h3>{featured.name}</h3>
+            <h3 className="feature">{featured.name}</h3>
           </div>
           <div className="viewAll">
             <NavLink to="/viewAllDestinations">View More...</NavLink>

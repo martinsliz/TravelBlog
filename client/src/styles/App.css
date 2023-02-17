@@ -36,15 +36,19 @@ header {
 }
 
 .bucket {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   width: 80%;
   font-size: x-large;
   font-weight: bold;
-  color: #531c06;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature {
+  text-align: center;
+  font-size: x-large;
 }
 
 .about {
@@ -105,7 +109,7 @@ header {
 }
 
 .viewAll {
-  margin-top: 20px;
+  margin: auto;
   font-size: x-large;
   font-weight: bolder;
 }
@@ -134,42 +138,43 @@ img {
   width: 50%;
 }
 
-.imageContainer {
-  /* background-color: rgba(250, 235, 215, 0.6); */
-}
-
-.detailImage {
-  width: 60%;
-  margin-top: 20px;
-  /* display: flex; */
-  /* flex-direction: column; */
-  align-items: center;
-  justify-content: center;
-}
-
-.destination-content .travel .imageContainer .detailImage {
-  margin-top: 20px;
+.destination-content {
+  width: 80%;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  width: 80%;
+  background-color: rgba(250, 235, 215, 0.6);
   font-size: x-large;
   font-weight: bold;
   color: #531c06;
 }
 
-.travel {
-  font-size: x-large;
-  justify-content: center;
+.info {
   text-align: left;
+  font-size: large;
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  font-size: medium;
+  text-align: left;
+  background-color: aqua;
 }
 
-.travelreview {
-  font-size: x-large;
+.reviewDisplay {
+  width: 40rem;
+  /* margin-top: 20px; */
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  /* align-content: center; */
+  font-size: medium;
   text-align: left;
+  background-color: rgba(87, 162, 57, 0.622);
 }
 
 .reviewForm {
