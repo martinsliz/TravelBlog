@@ -74,6 +74,8 @@ const UpdateReview = ({ review, getAllReviews, setUpdating }) => {
       <label htmlFor="comments">Comments:</label>
       <input
         type="text-area"
+        cols="20"
+        rows="10"
         id="comments"
         onChange={handleChange}
         value={formState.comments}

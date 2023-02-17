@@ -166,7 +166,7 @@ img {
 }
 
 .reviewDisplay {
-  width: 40rem;
+  width: 30rem;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -191,6 +191,7 @@ img {
   margin: 2em auto;
   border-radius: 15px;
 }
+
 input {
   width: 70%;
   padding: 12px 20px;
@@ -214,18 +215,21 @@ input {
 }
 
 button {
-  color: white;
-  font-family: Helvetica, Arial, Sans-Serif;
+  margin-top: 20px;
+  color: #531c06;
+  width: 10rem;
+  text-align: center;
+  align-items: center;
+  font-family: 'Lora', serif;
   font-size: 20px;
   text-decoration: none;
   text-shadow: -1px -1px 1px #616161;
-  position: relative;
-  padding: 15px 30px;
+  /* position: relative; */
+  /* padding: 15px 30px; */
   -webkit-box-shadow: 5px 5px 0 #666;
   -moz-box-shadow: 5px 5px 0 #666;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
-  margin: 0 10px 0 0;
 }
 
 button:hover {
