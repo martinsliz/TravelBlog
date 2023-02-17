@@ -27,21 +27,16 @@ const DestinationDetails = ({ details, destinations, setDetails }) => {
 
   return details ? (
     <div className="destination-content">
-      <div>
-        <h2>Name: {details.name}</h2>
-        <h3>Location: {details.location}</h3>
-      </div>
       <section className="imageContainer">
         <img className="detailImage" src={details.imageOne} alt="" />
       </section>
-      <div className="travel">
-        Languages: {details.languages}
-        Currency: {details.currency}
-        Travel Warning: {details.travelWarning}
+      <div className="bucket">
+        <h2>Destination: {details.name}</h2>
+        <h3>Location: {details.location}</h3>
+        <h3>Languages: {details.languages}</h3>
+        <h3>Currency: {details.currency}</h3>
+        <h3>Travel Warning: {details.travelWarning}</h3>
       </div>
-      <NavLink to="/addReview">
-        <h3>Add your own review here!</h3>
-      </NavLink>
       <div>
         {destinationReviews.map((review) => (
           <Review review={review} getAllReviews={getAllReviews} />

@@ -1,4 +1,5 @@
 import UpdateReview from './UpdateReview'
+import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
 
 const Review = ({ review, getAllReviews }) => {
@@ -6,23 +7,17 @@ const Review = ({ review, getAllReviews }) => {
 
   return (
     <div>
-      <div className="review">
-        <div>
-          <tr>
-            <td>
-              <h2>Rating: {review.rating}</h2>
-            </td>
-          </tr>
-          <tr>
-            <td>Budget friendly? {review.affordable}</td>
-          </tr>
-          <h6></h6>
-          <h6>Best Time to Go: {review.bestTimeToGo}</h6>
-          <h6>What to See: {review.attractions}</h6>
-          <h6>Where to Stay: {review.whereToStay}</h6>
-          <h6>Where to Eat: {review.restaurants}</h6>
-          Comments: {review.comments}
-        </div>
+      <div className="bucket">
+        <h3>Rating: {review.rating}</h3>
+        <h3>Budget friendly? {review.affordable}</h3>
+        <h3>Best Time to Go: {review.bestTimeToGo}</h3>
+        <h3>What to See: {review.attractions}</h3>
+        <h3>Where to Stay: {review.whereToStay}</h3>
+        <h3>Where to Eat: {review.restaurants}</h3>
+        <h3>Comments: {review.comments}</h3>
+      </div>
+      <div className="viewAll">
+        <NavLink to="/addReview">Add your own review here!</NavLink>
       </div>
       {updating ? (
         <div>

@@ -7,6 +7,7 @@ html {
 }
 
 body {
+  font-family: 'Lora', serif;
   margin: 0;
   color: #531c06;
   text-align: center;
@@ -56,7 +57,7 @@ header {
   font-size: x-large;
   font-weight: bold;
   color: #531c06;
-  background-color: antiquewhite;
+  background-color: rgba(250, 235, 215, 0.6);
   opacity: 0.8;
 }
 .flex-col {
@@ -105,7 +106,8 @@ header {
 
 .viewAll {
   margin-top: 20px;
-  font-size: xx-large;
+  font-size: x-large;
+  font-weight: bolder;
 }
 
 .container {
@@ -139,13 +141,13 @@ img {
 .detailImage {
   width: 60%;
   margin-top: 20px;
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
 }
 
-.destination-content {
+.destination-content .travel .imageContainer .detailImage {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -158,33 +160,16 @@ img {
   color: #531c06;
 }
 
-.details {
-  width: 80%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
+.travel {
+  font-size: x-large;
   justify-content: center;
-  align-items: center;
-}
-
-ul {
-  list-style-type: none;
   text-align: left;
 }
 
-.review {
-  background-color: rgb(105, 14, 145);
-  opacity: 0.9;
-  color: aliceblue;
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 20em;
-  min-height: 10em;
-  margin: 2em auto;
-  border-radius: 15px;
+.travelreview {
+  font-size: x-large;
+  justify-content: center;
+  text-align: left;
 }
 
 .reviewForm {
