@@ -10,7 +10,7 @@
 
 ### Description
 
-"The Wikipedia of Travel", this is a full-stack MERN application where users can find a collection of "bucket=list" travel destinations, read reviews, and even contribute their own.
+"The Wikipedia of Travel", this is a full-stack MERN application where users can find a collection of "bucket-list" travel destinations, read reviews, and even contribute their own.
 
 ---
 

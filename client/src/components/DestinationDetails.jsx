@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom'
 import { BASE_URL } from '../globals'
 import axios from 'axios'
 import Review from './Review'
-import { get } from 'mongoose'
 
 const DestinationDetails = ({ details, destinations, setDetails }) => {
   const [destinationReviews, setDestinationReviews] = useState([])
