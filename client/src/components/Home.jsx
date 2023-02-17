@@ -5,8 +5,8 @@ const Home = (props) => {
   const [featured, setFeatured] = useState({})
 
   useEffect(() => {
-    const getFeatured = props.destinations[3]
-    // [Math.floor(Math.random() * props.destinations.length)]
+    const getFeatured =
+      props.destinations[Math.floor(Math.random() * props.destinations.length)]
 
     setFeatured(getFeatured)
   }, [props.destinations])
