@@ -35,13 +35,13 @@
 ### Future updates
 
 - [ ] Functionality for users to add/edit/delete destinations
-- [ ] Image carousel for more photos
+- [ ] Image carousel for multiple photos
 - [ ] Timer on Featured Destination
 
 ---
 
 ### _Credits_
 
-#### Resources: [MDN](https://developer.mozilla.org/en-US/), [W3schools](https://www.w3schools.com/), [CSS-tricks](https://css-tricks.com/), [Google Fonts](https://fonts.google.com/specimen/Lora), [Forbes](https://www.forbes.com), [Wikipedia](https://www.wikipedia.org/)
+#### Resources: [MDN](https://developer.mozilla.org/en-US/), [W3schools](https://www.w3schools.com/), [CSS-tricks](https://css-tricks.com/), [Google Fonts](https://fonts.google.com/specimen/Lora), [Forbes](https://www.forbes.com), [US Dept. of State](https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html/) [The Broke Backpacker](https://www.thebrokebackpacker.com/is-fiji-expensive/), [Wikipedia](https://www.wikipedia.org/)
 
 #### Images: [Unsplash](https://unsplash.com/), [Forbes](https://www.forbes.com), [Imgur](https://imgur.com/)
