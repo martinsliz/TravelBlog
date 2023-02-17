@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
-import { useParams, NavLink } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { BASE_URL } from '../globals'
 import axios from 'axios'
 import Review from './Review'
+import { get } from 'mongoose'
 
 const DestinationDetails = ({ details, destinations, setDetails }) => {
   const [destinationReviews, setDestinationReviews] = useState([])
@@ -29,14 +30,14 @@ const DestinationDetails = ({ details, destinations, setDetails }) => {
     <div className="destination-content">
       <section className="imageContainer">
         <img className="detailImage" src={details.imageOne} alt="" />
+        <div className="info">
+          <h2 className="feature">Destination: {details.name}</h2>
+          <h3>Location: {details.location}</h3>
+          <h3>Languages: {details.languages}</h3>
+          <h3>Currency: {details.currency}</h3>
+          <h3>Travel Warning: {details.travelWarning}</h3>
+        </div>
       </section>
-      <div className="info">
-        <h2 className="feature">Destination: {details.name}</h2>
-        <h3>Location: {details.location}</h3>
-        <h3>Languages: {details.languages}</h3>
-        <h3>Currency: {details.currency}</h3>
-        <h3>Travel Warning: {details.travelWarning}</h3>
-      </div>
       <div>
         {destinationReviews.map((review) => (
           <Review review={review} getAllReviews={getAllReviews} />

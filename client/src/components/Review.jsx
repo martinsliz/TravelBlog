@@ -8,6 +8,9 @@ const Review = ({ review, getAllReviews }) => {
   return (
     <div className="reviewDisplay">
       <div>
+        <h3>
+          <u>REVIEWS</u>
+        </h3>
         <h3>Rating: {review.rating}</h3>
         <h3>Budget friendly? {review.affordable}</h3>
         <h3>Best Time to Go: {review.bestTimeToGo}</h3>
