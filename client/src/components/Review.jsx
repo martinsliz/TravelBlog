@@ -25,11 +25,13 @@ const Review = ({ review, getAllReviews }) => {
         </div>
       </div>
       {updating ? (
-        <UpdateReview
-          review={review}
-          getAllReviews={getAllReviews}
-          setUpdating={setUpdating}
-        />
+        <div>
+          <UpdateReview
+            review={review}
+            getAllReviews={getAllReviews}
+            setUpdating={setUpdating}
+          />
+        </div>
       ) : (
         <button onClick={() => setUpdating(true)}>Edit</button>
       )}

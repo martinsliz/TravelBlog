@@ -85,6 +85,7 @@ const UpdateReview = ({ review, getAllReviews, setUpdating }) => {
         onChange={handleChange}
         value={formState.image}
       />
+      <button type="submit">Save</button>
       <button onClick={deleteReview}>Delete</button>
     </form>
   )
