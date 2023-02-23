@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { useState } from 'react'
-import { BASE_URL } from '../globals'
 import { useNavigate } from 'react-router-dom'
 
 const ReviewForm = ({ details }) => {
@@ -25,7 +24,7 @@ const ReviewForm = ({ details }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await axios.post(`${BASE_URL}/reviewRouter/review`, formState)
+    await axios.post(`/api/reviewRouter/review`, formState)
     setFormState(initialState)
     navigate(`/destination/${details._id}`)
   }

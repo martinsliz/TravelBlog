@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { BASE_URL } from '../globals'
 import axios from 'axios'
 import Review from './Review'
 
@@ -10,7 +9,7 @@ const DestinationDetails = ({ details, destinations, setDetails }) => {
   let { id } = useParams()
 
   const getAllReviews = async () => {
-    const response = await axios.get(`${BASE_URL}/reviewRouter/reviews`)
+    const response = await axios.get(`api/reviewRouter/reviews`)
 
     let filterReviews = response.data.reviews.filter(
       (review) => review.destination === id
