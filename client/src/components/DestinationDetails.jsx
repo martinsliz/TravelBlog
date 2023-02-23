@@ -9,7 +9,7 @@ const DestinationDetails = ({ details, destinations, setDetails }) => {
   let { id } = useParams()
 
   const getAllReviews = async () => {
-    const response = await axios.get(`api/reviewRouter/reviews`)
+    const response = await axios.get('/api/reviewRouter/reviews')
 
     let filterReviews = response.data.reviews.filter(
       (review) => review.destination === id

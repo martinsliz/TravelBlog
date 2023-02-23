@@ -24,7 +24,7 @@ const ReviewForm = ({ details }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await axios.post(`/api/reviewRouter/review`, formState)
+    await axios.post('/api/reviewRouter/review', formState)
     setFormState(initialState)
     navigate(`/destination/${details._id}`)
   }
