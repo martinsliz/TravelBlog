@@ -4,7 +4,7 @@
 
 ### By: Liz Martins
 
-#### [[GitHub](https://github.com/martinsliz/The-Bucket-list-Bucket) | [LinkedIn](https://www.linkedin.com/in/elizmartins) | [Trello](https://trello.com/b/XrtSg1A5/the-bucket-list-bucket)
+#### [Deployed](https://thebucketlistbucket.herokuapp.com/)[[GitHub](https://github.com/martinsliz/The-Bucket-list-Bucket) | [LinkedIn](https://www.linkedin.com/in/elizmartins) | [Trello](https://trello.com/b/XrtSg1A5/the-bucket-list-bucket)
 
 ---
 
