@@ -14,13 +14,14 @@ const App = () => {
   const [details, setDetails] = useState('')
 
   const getDestinations = async () => {
-    const response = await axios.get(`/api/destinationRouter/destinations`)
+    const response = await axios.get(`api/destinationRouter/destinations`)
+    console.log(response.data)
     setDestinations(response.data.destinations)
   }
 
   useEffect(() => {
     getDestinations()
-  }, [])
+  }, [destinations])
 
   return (
     <div>

@@ -17,6 +17,7 @@ const getAllDestinations = async (req, res) => {
     const destinations = await Destination.find()
     return res.status(200).json({ destinations })
   } catch (error) {
+    console.log(error.message.data)
     return res.status(500).send(error.message)
   }
 }

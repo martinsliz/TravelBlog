@@ -9,7 +9,7 @@ mongoose
   .catch((e) => {
     console.error('Connection error', e.message)
   })
-mongoose.set('debug', true)
+mongoose.set('strictQuery', false)
 const db = mongoose.connection
 
 module.exports = db
