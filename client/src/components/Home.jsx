@@ -22,14 +22,14 @@ const Home = (props) => {
               Saving you from visiting hundreds of websites by putting
               everyone's bucket-list trips all in one place!
             </span>
-            <h2>
+            <h2 className="bucket">
               <u>Featured Destination!</u>
             </h2>
             <img className="coverImage" src={featured.imageOne} alt="Cover" />
             <h3 className="feature">{featured.name}</h3>
           </div>
           <div className="viewAll">
-            <NavLink to="/viewAllDestinations">View More...</NavLink>
+            <NavLink to="/destinations">View More...</NavLink>
           </div>
         </div>
       )}

@@ -1,9 +1,9 @@
 html {
-  /* background: url(https://i.imgur.com/urAOSQn.jpg) no-repeat center center fixed;
+  background: url(https://i.imgur.com/urAOSQn.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; */
+  background-size: cover;
 }
 
 body {
@@ -38,6 +38,7 @@ header {
 .bucket {
   width: 80%;
   font-size: x-large;
+  color: #531c06;
   font-weight: bold;
   margin-top: 20px;
   display: flex;

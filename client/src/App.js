@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { BASE_URL } from './globals'
 import axios from 'axios'
 import Header from './components/Header'
 import About from './components/About'
@@ -14,14 +15,16 @@ const App = () => {
   const [details, setDetails] = useState('')
 
   const getDestinations = async () => {
-    const response = await axios.get(`api/destinationRouter/destinations`)
+    const response = await axios.get(
+      `${BASE_URL}/destinationRouter/destinations`
+    )
     console.log(response.data)
     setDestinations(response.data.destinations)
   }
 
   useEffect(() => {
     getDestinations()
-  }, [destinations])
+  }, [])
 
   return (
     <div>
@@ -31,7 +34,7 @@ const App = () => {
           <Route index element={<Home destinations={destinations} />} />
           <Route path="/about" element={<About />} />
           <Route
-            path="/viewAllDestinations"
+            path="/destinations"
             element={<ViewAllDestinations destinations={destinations} />}
           />
           <Route
