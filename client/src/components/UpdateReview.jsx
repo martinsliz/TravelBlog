@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { BASE_URL } from '../globals'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
@@ -14,12 +15,15 @@ const UpdateReview = ({ review, getAllReviews, setUpdating }) => {
   const handleSubmit = async (event) => {
     event.preventDefault()
 
-    await axios.put(`/api/reviewRouter/review/${formState._id}`, formState)
+    await axios.put(
+      `${BASE_URL}/reviewRouter/review/${formState._id}`,
+      formState
+    )
     getAllReviews()
     setUpdating(false)
   }
   const deleteReview = async () => {
-    await axios.delete(`/api/reviewRouter/review/${formState._id}`)
+    await axios.delete(`${BASE_URL}/reviewRouter/review/${formState._id}`)
     navigate('/destination/:id')
   }
 
