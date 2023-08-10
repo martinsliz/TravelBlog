@@ -3,7 +3,7 @@ import { BASE_URL } from '../globals'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
-const UpdateReview = ({ review, getAllReviews, setUpdating }) => {
+const UpdateReview = ({ review, getAllReviews, setUpdating, setImage }) => {
   const [formState, setFormState] = useState(review)
 
   let navigate = useNavigate()
@@ -85,7 +85,7 @@ const UpdateReview = ({ review, getAllReviews, setUpdating }) => {
         type="text"
         id="image"
         onChange={handleChange}
-        value={formState.image}
+        value={formState.imageUrl}
       />
       <button type="submit">Save</button>
       <button onClick={deleteReview}>Delete</button>

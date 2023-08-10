@@ -2,7 +2,7 @@ import UpdateReview from './UpdateReview'
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
 
-const Review = ({ review, getAllReviews }) => {
+const Review = ({ review, getAllReviews, setImage }) => {
   const [updating, setUpdating] = useState(false)
 
   return (
@@ -18,6 +18,7 @@ const Review = ({ review, getAllReviews }) => {
         <h3>Where to Stay: {review.whereToStay}</h3>
         <h3>Where to Eat: {review.restaurants}</h3>
         <h3>Comments: {review.comments}</h3>
+        <h3>Image: {review.imageUrl}</h3>
       </div>
       <div className="viewAll">
         <NavLink to="/addReview">Add your own review here!</NavLink>
@@ -27,6 +28,7 @@ const Review = ({ review, getAllReviews }) => {
           <UpdateReview
             review={review}
             getAllReviews={getAllReviews}
+            setImage={setImage}
             setUpdating={setUpdating}
           />
         </div>

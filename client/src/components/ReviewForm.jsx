@@ -13,15 +13,17 @@ const ReviewForm = ({ details }) => {
     whereToStay: '',
     attractions: '',
     restaurants: '',
-    image: '',
+    imageUrl: '',
     comments: '',
     destination: details._id
   }
 
   const [formState, setFormState] = useState(initialState)
+  const [image, setImage] = useState('')
 
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
+    setImage([...event.target.files])
   }
 
   const handleSubmit = async (event) => {
@@ -41,6 +43,7 @@ const ReviewForm = ({ details }) => {
       <input
         type="text"
         id="rating"
+        placeholder="0: Skip it - 5: Pack your bags!"
         onChange={handleChange}
         value={formState.rating}
       />
@@ -48,6 +51,7 @@ const ReviewForm = ({ details }) => {
       <input
         type="text"
         id="affordable"
+        placeholder="Easy on the wallet?"
         onChange={handleChange}
         value={formState.affordable}
       />
@@ -55,6 +59,7 @@ const ReviewForm = ({ details }) => {
       <input
         type="text"
         id="bestTimeToGo"
+        placeholder="Give us the inside scoop!"
         onChange={handleChange}
         value={formState.bestTimeToGo}
       />
@@ -62,6 +67,7 @@ const ReviewForm = ({ details }) => {
       <input
         type="text"
         id="attractions"
+        placeholder="Touristy? Off the path?"
         onChange={handleChange}
         value={formState.attractions}
       />
@@ -69,6 +75,7 @@ const ReviewForm = ({ details }) => {
       <input
         type="text"
         id="whereToStay"
+        placeholder="Coziest spots go here!"
         onChange={handleChange}
         value={formState.whereToStay}
       />
@@ -76,6 +83,7 @@ const ReviewForm = ({ details }) => {
       <input
         type="text"
         id="restaurants"
+        placeholder="The most important part, food!"
         onChange={handleChange}
         value={formState.restaurants}
       />
@@ -85,15 +93,19 @@ const ReviewForm = ({ details }) => {
         cols="20"
         rows="10"
         id="comments"
+        placeholder="Spill it!"
         onChange={handleChange}
         value={formState.comments}
       />
       <label htmlFor="">Upload a Photo:</label>
       <input
-        type="text"
+        type="file"
+        multiple
+        accept="image/*"
         id="image"
+        placeholder="Post a link!"
         onChange={handleChange}
-        value={formState.image}
+        value={formState.imageUrl}
       />
       <button type="submit">Submit</button>
     </form>
