@@ -19,11 +19,9 @@ const ReviewForm = ({ details }) => {
   }
 
   const [formState, setFormState] = useState(initialState)
-  const [image, setImage] = useState('')
 
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
-    setImage([...event.target.files])
   }
 
   const handleSubmit = async (event) => {
