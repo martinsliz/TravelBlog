@@ -97,13 +97,11 @@ const ReviewForm = ({ details }) => {
         onChange={handleChange}
         value={formState.comments}
       />
-      <label htmlFor="">Upload a Photo:</label>
+      <label htmlFor="imageUrl">Share an image:</label>
       <input
-        type="file"
-        multiple
-        accept="image/*"
-        id="image"
-        placeholder="Post a link!"
+        type="text"
+        id="imageUrl"
+        placeholder="Paste the link here"
         onChange={handleChange}
         value={formState.imageUrl}
       />
